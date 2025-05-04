@@ -1,0 +1,29 @@
+[33mcommit 146c63ea17d83837538fa7c47a423868d6169ffd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: wuryanto <penshopx@gmail.com>
+Date:   Sun May 4 16:25:01 2025 +0700
+
+    Fix dynamic routes conflict
+
+[33mcommit 73ba5bd0056a27c78a2ff3f366579597a59de22a[m
+Author: wuryanto <penshopx@gmail.com>
+Date:   Sun May 4 14:21:59 2025 +0700
+
+    Fix missing exports for deployment
+
+[33mcommit c6b03e323fcec8fefbde33c29efdc9bc8756517e[m
+Author: wuryanto <penshopx@gmail.com>
+Date:   Sun May 4 13:36:29 2025 +0700
+
+    Persiapan untuk deployment
+
+[33mcommit d5145eeffe3bfb8fc6c75276e4360c237e30c934[m
+Author: wuryanto <penshopx@gmail.com>
+Date:   Sat May 3 17:08:12 2025 +0700
+
+    Versi minimal dengan halaman upload
+
+[33mcommit ba226c5b03c2e649d97c1b9d00ec94b78cbc7ec5[m
+Author: wuryanto <penshopx@gmail.com>
+Date:   Sat May 3 01:40:59 2025 +0700
+
+    Initial commit for Vercel deployment
