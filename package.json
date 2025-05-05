@@ -2,12 +2,11 @@
   "name": "iso-37001-documents",
   "version": "0.1.0",
   "private": true,
+  "{
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+    "deploy:db": "ts-node scripts/deploy-db.ts"
+  }
+}
   "dependencies": {
     "@prisma/client": "^5.0.0",
     "next": "^13.4.0",
