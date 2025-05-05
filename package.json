@@ -1,26 +1,8 @@
 {
-  "name": "construction-platform",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "prisma generate && next build"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.0.0",
-    "next": "^13.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.15.0",
-    "@types/react": "^18.0.28",
-    "eslint": "^8.36.0",
-    "eslint-config-next": "^13.4.0",
-    "prisma": "^5.0.0",
-    "typescript": "^5.0.2"
+    "lint": "next lint"
   }
 }

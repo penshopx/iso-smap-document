@@ -1,18 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  
-  // Jika Anda memerlukan redirects, gunakan format ini:
-  async redirects() {
-    return [
-      // Contoh redirect:
-      // {
-      //   source: '/lama',
-      //   destination: '/baru',
-      //   permanent: true,
-      // }
-    ]
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Mengatasi masalah dengan better-sqlite3 di Vercel
+      config.externals.push('better-sqlite3')
+    }
+    return config
   },
 }
 

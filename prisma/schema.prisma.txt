@@ -1,44 +1,27 @@
-// This is your Prisma schema file
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
-}
-model User {
-  id            String         @id @default(cuid())
-  name          String
-  email         String         @unique
-  password      String
-  role          String         @default("staff")
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
-  documents     Document[]
-  statusChanges StatusChange[]
+  url      = "file:/tmp/iso37001.db"
 }
 
+// Model-model Anda
 model Document {
-  id            String         @id @default(cuid())
-  title         String
-  content       String
-  userId        String
-  user          User           @relation(fields: [userId], references: [id])
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
-  status        String         @default("draft")
-  statusChanges StatusChange[]
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  type        String
+  clause      String
+  description String?
+  version     String   @default("1.0")
+  status      String   @default("draft")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdById String?
+  
+  // Relasi dan field lainnya
 }
 
-model StatusChange {
-  id          String   @id @default(cuid())
-  documentId  String
-  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
-  fromStatus  String
-  toStatus    String
-  comments    String?
-  createdAt   DateTime @default(now())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-}
+// Model-model lainnya...
